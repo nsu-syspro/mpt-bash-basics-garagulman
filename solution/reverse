@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 i=1
+touch tmp.txt
 while IFS= read -r line; do
   if [ $i = 1 ] ; then
   echo "$line" > tmp.txt
