@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-rm tmp.txt
 i=1
 while IFS= read -r line; do
   if [ $i = 1 ] ; then
@@ -9,3 +8,4 @@ while IFS= read -r line; do
   fi
   i=$(( i +1 ))
 done < "$1"
+cat tmp.txt
