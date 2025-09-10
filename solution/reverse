@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 i=1
 touch tmp.txt
-while IFS= read -r line; do
+for arg in "$@"; do
   if [ $i = 1 ] ; then
-  echo "$line" > tmp.txt
+  echo "$arg" > tmp.txt
   else	
-  sed -i "1i$line" tmp.txt
+  sed -i "1i$arg" tmp.txt
   fi
   i=$(( i +1 ))
-done < "$1"
+done
 cat tmp.txt
