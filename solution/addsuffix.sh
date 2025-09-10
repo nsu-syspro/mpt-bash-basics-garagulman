@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+for file in $2; do mv "$file" "$file$1"; done
